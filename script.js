@@ -9,3 +9,7 @@ const moveRandom = document.querySelector("#move-random");
 moveRandom.addEventListener("mouseenter", function (e) {
   moveRandomEl(e.target);
 });
+
+moveRandom.addEventListener("touchstart", function (e) {
+  moveRandomEl(e.target);
+});
