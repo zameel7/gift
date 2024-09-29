@@ -19,11 +19,15 @@
       function handleSubmit() {
         const nameInput = document.getElementById('name').value.toLowerCase();
         const today = new Date();
+        
         if (today.getDate() !== 1 || today.getMonth() !== 9) {
           window.location.href = 'notyet.html';
-        }
-        else {
-          if (nameInput === 'Zaba Maryam'.toLowerCase()) {
+        } else {
+          // New condition for specific names
+          const alertNames = ['zameel', 'ruwa', 'razwa', 'zaba', 'zekhiya', 'khaleel'];
+          if (alertNames.includes(nameInput)) {
+            alert("Passport il ingane allalo per illed 🥸?");
+          } else if (nameInput === 'zaba maryam'.toLowerCase()) {
             window.location.href = 'yes.html';
           } else {
             window.location.href = 'hehe.html';
